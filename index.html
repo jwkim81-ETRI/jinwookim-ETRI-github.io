@@ -6,23 +6,19 @@
     <title>Jinwoo Kim — Autonomous Driving Research Development</title>
     <meta name="description" content="Autonomous Driving · VLM · LLM · E2E R&D — publications, patents, projects, and research videos." />
 
-    <!-- Minimal, academic CV style (left sidebar + right content) -->
     <style>
-      :root{
-        --bg:#ffffff; --text:#222; --muted:#5b6780; --line:#e6e9ef; --link:#0b63c9; --link-hover:#0a56ad;
-      }
-      @media (prefers-color-scheme: dark){
-        :root{ --bg:#0d1220; --text:#e6ebf5; --muted:#a6b0c3; --line:#1c2437; --link:#69a9ff; --link-hover:#93c2ff; }
-      }
+      :root{--bg:#ffffff; --text:#222; --muted:#5b6780; --line:#e6e9ef; --link:#0b63c9; --link-hover:#0a56ad}
+      @media (prefers-color-scheme: dark){:root{--bg:#0d1220; --text:#e6ebf5; --muted:#a6b0c3; --line:#1c2437; --link:#69a9ff; --link-hover:#93c2ff}}
       *{box-sizing:border-box}
-      html,body{height:100%}
       body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Georgia, "Times New Roman", Times, serif}
       a{color:var(--link);text-decoration:none}
       a:hover{text-decoration:underline;color:var(--link-hover)}
+      header{border-bottom:1px solid var(--line);padding:14px 28px;background:var(--bg);position:sticky;top:0;z-index:50}
+      nav a{margin-right:20px;font-weight:600;color:var(--text)}
+      nav a:hover{color:var(--link)}
       .wrap{max-width:1150px;margin:0 auto;padding:24px}
       .grid{display:grid;grid-template-columns:300px 1fr;gap:28px}
-      /* Sidebar */
-      aside{position:sticky;top:24px;align-self:start;border:1px solid var(--line);border-radius:14px;padding:22px}
+      aside{position:sticky;top:90px;align-self:start;border:1px solid var(--line);border-radius:14px;padding:22px}
       .avatar{width:140px;height:140px;border-radius:12px;background:#eef2ff;display:block}
       .name{font-weight:700;font-size:26px;margin:14px 0 6px}
       .affil{color:var(--muted);margin-bottom:8px}
@@ -30,7 +26,6 @@
       .links{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
       .links a{display:inline-flex;align-items:center;gap:8px}
       .icon{width:18px;height:18px;opacity:.88}
-      /* Main */
       main{border:1px solid var(--line);border-radius:14px;padding:0}
       section{padding:22px 26px;border-top:1px solid var(--line)}
       section:first-child{border-top:none}
@@ -43,37 +38,49 @@
       .pubs li{margin:8px 0}
       footer{padding:20px 0;color:var(--muted)}
       @media (max-width:900px){.grid{grid-template-columns:1fr}aside{position:static}}
-      /* Small badge style */
       .badge{background:#f2f6ff;color:#2b5fb8;border:1px solid var(--line);padding:2px 8px;border-radius:999px;font-size:12px}
       @media (prefers-color-scheme: dark){.badge{background:#0e1a33;color:#a9c8ff}}
       .thumb{width:360px;max-width:100%;border:1px solid var(--line);border-radius:10px;display:block}
     </style>
   </head>
   <body>
+    <header>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#interests">Research</a>
+        <a href="#pubs">Publications</a>
+        <a href="#patents">Patents</a>
+        <a href="#projects">Projects</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
     <div class="wrap">
       <div class="grid">
         <aside>
-          <img class="avatar" src="assets/profile.jpg" alt="Profile placeholder" />
+          <img class="avatar" src="/assets/profile.jpg?v=1" alt="Profile photo" onerror="this.onerror=null;this.src='/assets/ADS5.jpg'" />
           <div class="name">Jinwoo Kim</div>
           <div class="affil">Autonomous Driving Research Development</div>
           <div class="loc">Daejeon, South Korea</div>
           <ul class="links">
-            <li><a href="https://github.com/jwkim81-ETRI" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 10 8.1 11.6.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.6-1.5-2-1.5-2-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.2 2 3.1 1.4 3.9 1.1.1-.9.5-1.4.8-1.7-2.7-.3-5.6-1.4-5.6-6.1 0-1.4.5-2.6 1.2-3.6-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.6 1.7.2 3 .1 3.3.8 1 1.2 2.2 1.2 3.6 0 4.7-2.9 5.8-5.6 6.1.5.4.9 1.2.9 2.4v3.5c0 .3.2.7.8.6A12.2 12.2 0 0 0 24 12.7 12 12 0 0 0 12 .5Z"/></svg>GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jinwoo-kim-836a9b56/" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1s2.48 1.1 2.48 2.5zM.5 8h4V23h-4V8zm7.98 0h3.84v2.04h.06c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.2V23h-4v-6.5c0-1.56-.03-3.57-2.18-3.57-2.18 0-2.52 1.7-2.52 3.46V23h-4V8z"/></svg>LinkedIn</a></li>
-            <li><a href="https://scholar.google.com/citations?user=ygAVm3EAAAAJ&hl=en" aria-label="Google Scholar"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 9l11 7 9-5.7V20h2V9L12 2z"/></svg>Google Scholar</a></li>
+            <li><a href="https://github.com/jwkim81-ETRI">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/jinwoo-kim-836a9b56/">LinkedIn</a></li>
+            <li><a href="https://scholar.google.com/citations?user=ygAVm3EAAAAJ&hl=en">Google Scholar</a></li>
           </ul>
         </aside>
 
         <main>
           <section id="about">
             <h1>About Me</h1>
-            <p class="lead">Senior researcher building <strong>vision‑language based end‑to‑end intelligence</strong> for autonomous driving. I focus on <em>perception‑to‑planning</em> with <strong>multi‑stage reasoning</strong>, <strong>HD‑map aware actions</strong>, and <strong>real‑time inference</strong> in adverse weather/night/OOD conditions.</p>
+            <p class="lead">Senior researcher with <strong>15 years of autonomous driving research</strong>, currently applying <strong>end‑to‑end vision‑language models</strong> to real vehicles. My focus is on building driving intelligence comparable to humans—and advancing beyond it. I explore <em>perception‑to‑planning</em> with <strong>multi‑stage reasoning</strong>, <strong>HD‑map aware actions</strong>, and <strong>real‑time inference</strong> in adverse weather/night/OOD conditions.</p>
           </section>
 
           <section id="news" class="news">
             <h2>News</h2>
             <ul>
-              <li>2024.09 — <span class="badge">ECCV WS</span> RoSA Dataset accepted.</li>
+              <li>2025.07 — <span class="badge">ICCV 2025 WS</span> <strong>SADWA: Fine‑Grained Weather Awareness with Vision‑Language Models for Seamless Autonomous Driving in Real Time</strong> accepted. Authors: Jinwoo Kim, Hayeon Oh, Youngmin Oh, Kyounghwan An, Donghwan Lee.</li>
               <li>2025 — Building VLM‑based E2E driving stack with weather robustness and selective routing.</li>
             </ul>
           </section>
@@ -92,6 +99,10 @@
           <section id="pubs" class="pubs">
             <h2>Publications <span class="small muted">· <a href="https://scholar.google.com/citations?user=ygAVm3EAAAAJ&hl=en">Google Scholar full list</a></span></h2>
             <ol>
+              <li>
+                <strong>SADWA: Fine‑Grained Weather Awareness with Vision‑Language Models for Seamless Autonomous Driving in Real Time</strong>
+                <span class="muted"> — ICCV 2025 Workshop</span>
+              </li>
               <li>
                 <strong>RoSA Dataset: Road Construction Zone Segmentation for Autonomous Driving</strong>
                 <span class="muted"> — ECCV Workshop, 2024‑09‑30</span>
@@ -140,9 +151,16 @@
           <section id="videos">
             <h2>Research Videos</h2>
             <a href="https://www.linkedin.com/feed/update/urn:li:activity:7318985849746964480/?originTrackingId=CSS3Pgt2RBeym8hrcGkSqQ%3D%3D" target="_blank" rel="noopener">
-              <img class="thumb" src="ADS5.jpg" alt="Autonomous driving demo thumbnail" />
+              <img class="thumb" src="/assets/ADS5.jpg" alt="Autonomous driving demo thumbnail" />
             </a>
             <div class="muted" style="margin-top:6px">Click the thumbnail to watch on LinkedIn.</div>
+
+            <h3>YouTube Appearances</h3>
+            <div style="display:flex;gap:16px;flex-wrap:wrap">
+              <a href="https://youtu.be/GlPyKlAe51E?feature=shared" target="_blank"><img class="thumb" src="/assets/youtube1.jpg" alt="YouTube video 1"></a>
+              <a href="https://youtu.be/EL1s0mYqN9I?feature=shared" target="_blank"><img class="thumb" src="/assets/youtube2.jpg" alt="YouTube video 2"></a>
+              <a href="https://youtu.be/CpQyBskGDPw?feature=shared" target="_blank"><img class="thumb" src="/assets/youtube3.jpg" alt="YouTube video 3"></a>
+            </div>
           </section>
 
           <section id="contact">
