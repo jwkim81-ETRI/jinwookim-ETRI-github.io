@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jinwoo Kim — Autonomous Driving Research Development</title>
+    <meta name="description" content="Autonomous Driving Research Development · VLM · LLM · E2E R&D — 논문, 특허, 프로젝트와 연구 동영상을 소개합니다." />
+
+    <!-- Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter","Noto Sans KR","system-ui"] } } } };
+    </script>
+    <style>:focus-visible{outline:2px solid #0ea5e9;outline-offset:2px}</style>
+  </head>
+  <body class="font-sans text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-950 min-h-screen">
+    <header class="sticky top-0 z-50 backdrop-blur bg-white/80 dark:bg-slate-950/70 border-b border-slate-200/60 dark:border-slate-800">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#home" class="font-bold">Jinwoo Kim</a>
+        <nav class="hidden sm:flex gap-6 text-sm">
+          <a href="#about">About</a>
+          <a href="#interests">Interests</a>
+          <a href="#pubs">Publications</a>
+          <a href="#patents">Patents</a>
+          <a href="#projects">Projects</a>
+          <a href="#videos">연구 결과 동영상</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="themeToggle" class="rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-1.5 text-sm">🌗</button>
+      </div>
+    </header>
+
+    <section id="home" class="max-w-5xl mx-auto px-4 py-10">
+      <h1 class="text-3xl md:text-4xl font-bold">Autonomous Driving Research Development</h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-300">Autonomous Driving · Vision-Language Models · Large Language Models</p>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
+      <h2 class="text-2xl font-bold">Research Interests</h2>
+      <ul class="mt-3 list-disc ml-6 space-y-1">
+        <li>Vision-Language Planning, End-to-End Autonomous Driving</li>
+        <li>Robustness under weather/night/OOD</li>
+        <li>Real-time inference and efficient backbones</li>
+        <li>Multi-stage reasoning, memory, selective routing</li>
+        <li>HD-map aware action reasoning</li>
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="pubs" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
+      <h2 class="text-2xl font-bold">Publications</h2>
+      <ol class="mt-4 space-y-4 list-decimal ml-6">
+        <li>
+          <span class="font-semibold">RoSA Dataset: Road construct zone Segmentation for Autonomous Driving</span> — <span class="text-slate-600 dark:text-slate-400">ECCV Workshop, 2024-09-30</span>
+          <div class="text-sm mt-1 flex gap-3">
+            <a class="text-sky-600 hover:underline" href="https://www.springerprofessional.de/en/rosa-dataset-road-construct-zone-segmentation-for-autonomous-dri/51030158">[Publisher]</a>
+          </div>
+        </li>
+        <li>
+          <span class="font-semibold">Multi-sensor-based Detection and Tracking of Moving Objects for Relative Position Estimation in Autonomous Driving Conditions</span> — <span class="text-slate-600 dark:text-slate-400">Springer, 2020-10-01</span>
+          <div class="text-sm mt-1 flex gap-3">
+            <a class="text-sky-600 hover:underline" href="https://link.springer.com/article/10.1007/s11227-019-02811-y">[Publisher]</a>
+          </div>
+        </li>
+        <li>
+          <span class="font-semibold">Fusion of driver-information based driver status recognition for co-pilot system</span> — <span class="text-slate-600 dark:text-slate-400">IEEE Intelligent Vehicles Symposium, 2016-06-21</span>
+          <div class="text-sm mt-1 flex gap-3">
+            <a class="text-sky-600 hover:underline" href="https://ieeexplore.ieee.org/document/7535573">[IEEE Xplore]</a>
+          </div>
+        </li>
+        <li>
+          <span class="font-semibold">Multimodal Interface Based on Novel HMI UI/UX for In-Vehicle Infotainment System</span> — <span class="text-slate-600 dark:text-slate-400">ETRI Journal, 2015-01-01</span>
+          <div class="text-sm mt-1 flex gap-3">
+            <a class="text-sky-600 hover:underline" href="https://onlinelibrary.wiley.com/doi/full/10.4218/etrij.15.0114.0076">[Wiley/ETRI Journal]</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Patents -->
+    <section id="patents" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
+      <h2 class="text-2xl font-bold">Patents</h2>
+      <ul class="list-disc ml-6 mt-4 space-y-2 text-sm">
+        <li><span class="font-medium">SYSTEM AND METHOD FOR FUSION RECOGNITION USING ACTIVE STICK FILTER</span> — US <strong>11790555</strong>, 2023-10-17</li>
+        <li><span class="font-medium">THE APPARATUS AND METHOD FOR DRIVER STATUS RECOGNITION BASED ON DRIVING STATUS DECISION INFORMATION</span> — JP <strong>7154959</strong>, 2022-10-07</li>
+        <li><span class="font-medium">APPARATUS AND METHOD OF LEARNING POSE OF MOVING OBJECT</span> — US <strong>10789717</strong>, 2020-09-29</li>
+        <li><span class="font-medium">USER INTENTION ANALYSIS APPARATUS AND METHOD BASED ON IMAGE INFORMATION OF THREE-DIMENSIONAL SPACE</span> — US <strong>9886623</strong>, 2018-02-06</li>
+        <li><span class="font-medium">SYSTEM AND METHOD FOR LEARNING DRIVING INFORMATION IN VEHICLE</span> — US <strong>9485474</strong>, 2016-11-01</li>
+        <li><span class="font-medium">METHOD AND APPARATUS FOR ANALYZING CONCENTRATION LEVEL OF DRIVER</span> — US <strong>9355546</strong>, 2016-05-31</li>
+        <li><span class="font-medium">AUGMENTED REALITY DISPLAY SYSTEM AND METHOD FOR VEHICLE</span> — US <strong>9075563</strong>, 2015-07-07</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
+      <h2 class="text-2xl font-bold">Projects</h2>
+      <ul class="list-disc ml-6 mt-3 space-y-1">
+        <li>E2E Weather-Robust Driving</li>
+        <li>Selective Routing Planner</li>
+        <li>Map-aware Action Reasoner</li>
+      </ul>
+    </section>
+
+    <!-- Research Videos -->
+    <section id="videos" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
+      <h2 class="text-2xl font-bold">연구 결과 동영상</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-300">LinkedIn에 게시한 연구 시연 동영상 모음입니다.</p>
+      <ul class="list-disc ml-6 mt-3 space-y-2">
+        <li><a href="https://www.linkedin.com/in/jinwoo-kim-836a9b56/details/featured/" class="text-sky-600 hover:underline">전체 동영상 보기 (LinkedIn Featured)</a></li>
+        <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7318985849746964480/?originTrackingId=CSS3Pgt2RBeym8hrcGkSqQ%3D%3D" class="text-sky-600 hover:underline">[Demo Video] Autonomous Driving Research 결과 영상</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <ul class="mt-3 space-y-2">
+        <li>🐙 GitHub: <a class="text-sky-600 hover:underline" href="https://github.com/jinwookim-ETRI">github.com/jinwookim-ETRI</a></li>
+        <li>🔗 LinkedIn: <a class="text-sky-600 hover:underline" href="https://www.linkedin.com/in/jinwoo-kim-836a9b56/">linkedin.com/in/jinwoo-kim-836a9b56</a></li>
+      </ul>
+    </section>
+
+    <footer class="max-w-5xl mx-auto px-4 py-10 text-sm text-slate-500">
+      <div class="flex items-center justify-between">
+        <span>© <span id="year"></span> Autonomous Driving Research Development</span>
+        <a href="#home" class="hover:text-sky-600">맨 위로 ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('themeToggle')?.addEventListener('click', () => {
+        const d = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', d ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>
