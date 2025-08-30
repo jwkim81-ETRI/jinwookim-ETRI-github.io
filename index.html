@@ -1,142 +1,140 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jinwoo Kim — Autonomous Driving Research Development</title>
     <meta name="description" content="Autonomous Driving Research Development · Vision-Language Models · Large Language Models · Publications, Patents, Projects, and Research Videos." />
 
-    <!-- Fonts & Tailwind -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter","system-ui"] } } } };
-    </script>
-    <style>:focus-visible{outline:2px solid #0ea5e9;outline-offset:2px}</style>
+    <!-- Minimal CSS for left-sidebar academic layout -->
+    <style>
+      :root{--text:#0f172a;--muted:#475569;--bg:#ffffff;--line:#e2e8f0;--link:#0ea5e9}
+      @media (prefers-color-scheme: dark){:root{--text:#e2e8f0;--muted:#9ca3af;--bg:#0b1020;--line:#1f2937;--link:#38bdf8}}
+      *{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);background:var(--bg)}
+      a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+      .container{max-width:1100px;margin:0 auto;padding:24px}
+      .grid{display:grid;grid-template-columns:320px 1fr;gap:32px}
+      aside{position:sticky;top:24px;height:max-content;border:1px solid var(--line);border-radius:16px;padding:24px}
+      .avatar{width:128px;height:128px;border-radius:16px;background:#eef2ff;display:block}
+      .name{font-weight:800;font-size:22px;margin:8px 0 4px}
+      .role{color:var(--muted)}
+      .list-plain{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+      .icon{width:18px;height:18px;opacity:.8;margin-right:8px;vertical-align:-3px}
+      main section{border-bottom:1px solid var(--line);padding:24px 0}
+      h2{font-size:22px;margin:0 0 12px}
+      .news li{margin:4px 0}
+      .pubs ol{padding-left:20px}
+      .small{color:var(--muted);font-size:14px}
+      footer{padding:28px 0;color:var(--muted)}
+      /* mobile */
+      @media (max-width:900px){.grid{grid-template-columns:1fr}aside{position:static}}
+    </style>
   </head>
-  <body class="font-sans text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-950 min-h-screen">
-    <header class="sticky top-0 z-50 backdrop-blur bg-white/80 dark:bg-slate-950/70 border-b border-slate-200/60 dark:border-slate-800">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="#home" class="font-bold">Jinwoo Kim</a>
-        <nav class="hidden sm:flex gap-6 text-sm">
-          <a href="#about">About</a>
-          <a href="#interests">Interests</a>
-          <a href="#pubs">Publications</a>
-          <a href="#patents">Patents</a>
-          <a href="#projects">Projects</a>
-          <a href="#videos">Research Videos</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button id="themeToggle" class="rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-1.5 text-sm">🌗</button>
+  <body>
+    <div class="container">
+      <div class="grid">
+        <!-- Left sidebar -->
+        <aside>
+          <img class="avatar" src="assets/profile.jpg" alt="Profile photo placeholder" />
+          <div class="name">Jinwoo Kim</div>
+          <div class="role">Autonomous Driving Research Development</div>
+          <div class="small">Daejeon, South Korea</div>
+
+          <ul class="list-plain">
+            <li>🐙 <a href="https://github.com/jwkim81-ETRI">GitHub</a></li>
+            <li>🔗 <a href="https://www.linkedin.com/in/jinwoo-kim-836a9b56/">LinkedIn</a></li>
+            <li>🧑‍🎓 <a href="https://scholar.google.com/citations?user=ygAVm3EAAAAJ&hl=en">Google Scholar</a></li>
+          </ul>
+        </aside>
+
+        <!-- Right content -->
+        <main>
+          <section id="about">
+            <p><strong>Senior researcher</strong> focusing on vision-language based, end-to-end intelligence for autonomous driving. I study perception-to-planning with <strong>multi‑stage reasoning</strong>, <strong>HD‑map aware action</strong>, and <strong>real‑time inference</strong> under adverse weather/night/OOD conditions.</p>
+          </section>
+
+          <section id="news">
+            <h2>News</h2>
+            <ul class="news">
+              <li>2024.09 — RoSA Dataset accepted to <em>ECCV Workshop</em>.</li>
+              <li>2025 — Building VLM‑based E2E driving stack with weather robustness and selective routing.</li>
+            </ul>
+          </section>
+
+          <section id="interests">
+            <h2>Research Interests</h2>
+            <ul>
+              <li>Vision‑Language Planning (VLP), End‑to‑End Autonomous Driving</li>
+              <li>Robustness under weather/night/OOD; uncertainty</li>
+              <li>Real‑time inference, efficient CNN/VLM hybrid backbones</li>
+              <li>Multi‑stage reasoning, memory, selective routing</li>
+              <li>HD‑map aware action reasoning</li>
+            </ul>
+          </section>
+
+          <section id="pubs" class="pubs">
+            <h2>Publications</h2>
+            <ol>
+              <li>
+                <strong>RoSA Dataset: Road Construction Zone Segmentation for Autonomous Driving</strong>
+                <span class="small"> — ECCV Workshop, 2024‑09‑30</span>
+                — <a href="https://www.springerprofessional.de/en/rosa-dataset-road-construct-zone-segmentation-for-autonomous-dri/51030158">Publisher</a>
+              </li>
+              <li>
+                <strong>Multi‑sensor‑based Detection and Tracking of Moving Objects for Relative Position Estimation in Autonomous Driving Conditions</strong>
+                <span class="small"> — Springer, 2020‑10‑01</span>
+                — <a href="https://link.springer.com/article/10.1007/s11227-019-02811-y">Publisher</a>
+              </li>
+              <li>
+                <strong>Fusion of Driver‑information based Driver Status Recognition for Co‑pilot System</strong>
+                <span class="small"> — IEEE Intelligent Vehicles Symposium, 2016‑06‑21</span>
+                — <a href="https://ieeexplore.ieee.org/document/7535573">IEEE Xplore</a>
+              </li>
+              <li>
+                <strong>Multimodal Interface Based on Novel HMI UI/UX for In‑Vehicle Infotainment System</strong>
+                <span class="small"> — ETRI Journal, 2015‑01‑01</span>
+                — <a href="https://onlinelibrary.wiley.com/doi/full/10.4218/etrij.15.0114.0076">ETRI Journal</a>
+              </li>
+            </ol>
+          </section>
+
+          <section id="patents">
+            <h2>Patents</h2>
+            <ul>
+              <li><strong>System and Method for Fusion Recognition Using Active Stick Filter</strong> — US 11790555 (2023‑10‑17)</li>
+              <li><strong>The Apparatus and Method for Driver Status Recognition Based on Driving Status Decision Information</strong> — JP 7154959 (2022‑10‑07)</li>
+              <li><strong>Apparatus and Method of Learning Pose of Moving Object</strong> — US 10789717 (2020‑09‑29)</li>
+              <li><strong>User Intention Analysis Apparatus and Method Based on Image Information of Three‑Dimensional Space</strong> — US 9886623 (2018‑02‑06)</li>
+              <li><strong>System and Method for Learning Driving Information in Vehicle</strong> — US 9485474 (2016‑11‑01)</li>
+              <li><strong>Method and Apparatus for Analyzing Concentration Level of Driver</strong> — US 9355546 (2016‑05‑31)</li>
+              <li><strong>Augmented Reality Display System and Method for Vehicle</strong> — US 9075563 (2015‑07‑07)</li>
+            </ul>
+          </section>
+
+          <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+              <li>End‑to‑End Weather‑Robust Driving</li>
+              <li>Selective Routing Planner</li>
+              <li>Map‑aware Action Reasoner</li>
+            </ul>
+          </section>
+
+          <section id="videos">
+  <h2>Research Videos</h2>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7318985849746964480/?originTrackingId=CSS3Pgt2RBeym8hrcGkSqQ%3D%3D" target="_blank">
+      <img src="ADS5.jpg" alt="Autonomous Driving Demo Video" style="width:380px;border-radius:8px;border:1px solid #ddd">
+    </a>
+  </div>
+</section>
+
+          <footer>
+            © <span id="year"></span> Autonomous Driving Research Development
+          </footer>
+        </main>
       </div>
-    </header>
-
-    <section id="home" class="max-w-5xl mx-auto px-4 py-10">
-      <h1 class="text-3xl md:text-4xl font-bold">Autonomous Driving Research Development</h1>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">Autonomous Driving · Vision-Language Models · Large Language Models</p>
-    </section>
-
-    <!-- Research Interests -->
-    <section id="interests" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
-      <h2 class="text-2xl font-bold">Research Interests</h2>
-      <ul class="mt-3 list-disc ml-6 space-y-1">
-        <li>Vision-Language Planning, End-to-End Autonomous Driving</li>
-        <li>Robustness under weather/night/OOD conditions</li>
-        <li>Real-time inference and efficient backbone design</li>
-        <li>Multi-stage reasoning, memory, selective routing</li>
-        <li>HD-map aware action reasoning</li>
-      </ul>
-    </section>
-
-    <!-- Publications -->
-    <section id="pubs" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
-      <h2 class="text-2xl font-bold">Publications</h2>
-      <ol class="mt-4 space-y-4 list-decimal ml-6">
-        <li>
-          <span class="font-semibold">RoSA Dataset: Road Construction Zone Segmentation for Autonomous Driving</span> — <span class="text-slate-600 dark:text-slate-400">ECCV Workshop, 2024-09-30</span>
-          <div class="text-sm mt-1 flex gap-3">
-            <a class="text-sky-600 hover:underline" href="https://www.springerprofessional.de/en/rosa-dataset-road-construct-zone-segmentation-for-autonomous-dri/51030158">[Publisher]</a>
-          </div>
-        </li>
-        <li>
-          <span class="font-semibold">Multi-sensor-based Detection and Tracking of Moving Objects for Relative Position Estimation in Autonomous Driving Conditions</span> — <span class="text-slate-600 dark:text-slate-400">Springer, 2020-10-01</span>
-          <div class="text-sm mt-1 flex gap-3">
-            <a class="text-sky-600 hover:underline" href="https://link.springer.com/article/10.1007/s11227-019-02811-y">[Publisher]</a>
-          </div>
-        </li>
-        <li>
-          <span class="font-semibold">Fusion of Driver-information based Driver Status Recognition for Co-pilot System</span> — <span class="text-slate-600 dark:text-slate-400">IEEE Intelligent Vehicles Symposium, 2016-06-21</span>
-          <div class="text-sm mt-1 flex gap-3">
-            <a class="text-sky-600 hover:underline" href="https://ieeexplore.ieee.org/document/7535573">[IEEE Xplore]</a>
-          </div>
-        </li>
-        <li>
-          <span class="font-semibold">Multimodal Interface Based on Novel HMI UI/UX for In-Vehicle Infotainment System</span> — <span class="text-slate-600 dark:text-slate-400">ETRI Journal, 2015-01-01</span>
-          <div class="text-sm mt-1 flex gap-3">
-            <a class="text-sky-600 hover:underline" href="https://onlinelibrary.wiley.com/doi/full/10.4218/etrij.15.0114.0076">[ETRI Journal]</a>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Patents -->
-    <section id="patents" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
-      <h2 class="text-2xl font-bold">Patents</h2>
-      <ul class="list-disc ml-6 mt-4 space-y-2 text-sm">
-        <li><strong>SYSTEM AND METHOD FOR FUSION RECOGNITION USING ACTIVE STICK FILTER</strong> — US 11790555, 2023-10-17</li>
-        <li><strong>THE APPARATUS AND METHOD FOR DRIVER STATUS RECOGNITION BASED ON DRIVING STATUS DECISION INFORMATION</strong> — JP 7154959, 2022-10-07</li>
-        <li><strong>APPARATUS AND METHOD OF LEARNING POSE OF MOVING OBJECT</strong> — US 10789717, 2020-09-29</li>
-        <li><strong>USER INTENTION ANALYSIS APPARATUS AND METHOD BASED ON IMAGE INFORMATION OF THREE-DIMENSIONAL SPACE</strong> — US 9886623, 2018-02-06</li>
-        <li><strong>SYSTEM AND METHOD FOR LEARNING DRIVING INFORMATION IN VEHICLE</strong> — US 9485474, 2016-11-01</li>
-        <li><strong>METHOD AND APPARATUS FOR ANALYZING CONCENTRATION LEVEL OF DRIVER</strong> — US 9355546, 2016-05-31</li>
-        <li><strong>AUGMENTED REALITY DISPLAY SYSTEM AND METHOD FOR VEHICLE</strong> — US 9075563, 2015-07-07</li>
-      </ul>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
-      <h2 class="text-2xl font-bold">Projects</h2>
-      <ul class="list-disc ml-6 mt-3 space-y-1">
-        <li>End-to-End Weather-Robust Driving</li>
-        <li>Selective Routing Planner</li>
-        <li>Map-aware Action Reasoner</li>
-      </ul>
-    </section>
-
-    <!-- Research Videos -->
-    <section id="videos" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
-      <h2 class="text-2xl font-bold">Research Videos</h2>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">Selected research demonstration videos posted on LinkedIn.</p>
-      <ul class="list-disc ml-6 mt-3 space-y-2">
-        <li><a href="https://www.linkedin.com/in/jinwoo-kim-836a9b56/details/featured/" class="text-sky-600 hover:underline">View all featured videos on LinkedIn</a></li>
-        <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7318985849746964480/?originTrackingId=CSS3Pgt2RBeym8hrcGkSqQ%3D%3D" class="text-sky-600 hover:underline">[Demo Video] Autonomous Driving Research</a></li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="max-w-5xl mx-auto px-4 py-8 border-t border-slate-200/60 dark:border-slate-800">
-      <h2 class="text-2xl font-bold">Contact</h2>
-      <ul class="mt-3 space-y-2">
-        <li>🐙 GitHub: <a class="text-sky-600 hover:underline" href="https://github.com/jinwookim-ETRI">github.com/jinwookim-ETRI</a></li>
-        <li>🔗 LinkedIn: <a class="text-sky-600 hover:underline" href="https://www.linkedin.com/in/jinwoo-kim-836a9b56/">linkedin.com/in/jinwoo-kim-836a9b56</a></li>
-      </ul>
-    </section>
-
-    <footer class="max-w-5xl mx-auto px-4 py-10 text-sm text-slate-500">
-      <div class="flex items-center justify-between">
-        <span>© <span id="year"></span> Autonomous Driving Research Development</span>
-        <a href="#home" class="hover:text-sky-600">Back to top ↑</a>
-      </div>
-    </footer>
-
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-      document.getElementById('themeToggle')?.addEventListener('click', () => {
-        const d = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', d ? 'dark' : 'light');
-      });
-    </script>
+    </div>
+    <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
   </body>
 </html>
