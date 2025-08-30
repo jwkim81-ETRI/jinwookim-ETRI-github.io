@@ -1,4 +1,205 @@
-/assets/ADS_RL-E2E.jpg
-/assets/ADS_taxi.jpg
-/assets/ADS_suttle.jpg
-/assets/ADS_Seamless.jpg
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jinwoo Kim — Autonomous Driving · VLM · LLM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Jinwoo Kim — Autonomous Driving · VLM · LLM"/>
+  <meta property="og:description" content="Autonomous driving, VLM, LLM, E2E R&D — research, publications, patents, projects."/>
+  <meta property="og:type" content="website"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --line: #30363d;
+      --link: #2f81f7;
+    }
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+    body {background:var(--bg);color:var(--text);line-height:1.6}
+    a {color:var(--link);text-decoration:none}
+    a:hover {text-decoration:underline}
+    header {background:var(--card);padding:20px;position:sticky;top:0;z-index:1000;display:flex;justify-content:center;border-bottom:1px solid var(--line)}
+    nav a{margin-right:20px;font-weight:600;color:var(--text)}
+    nav a.active{color:var(--link)}
+    .container {max-width:1100px;margin:40px auto;padding:0 20px}
+    h1,h2,h3{margin-bottom:12px}
+    h1{font-size:28px} h2{font-size:22px;border-bottom:1px solid var(--line);padding-bottom:4px;margin-top:28px}
+    h3{font-size:18px}
+    .lead{font-size:18px;margin-bottom:18px}
+    .muted{color:var(--muted);font-size:14px}
+    section{margin-bottom:40px}
+    /* Sidebar + main grid */
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:32px}
+    .card{background:var(--card);padding:20px;border-radius:12px;border:1px solid var(--line)}
+    .avatar{width:100%;border-radius:12px;margin-bottom:14px}
+    /* timeline */
+    .timeline{position:relative;margin:10px 0 0 0;padding-left:22px}
+    .timeline:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--line)}
+    .tl-item{position:relative;margin:14px 0}
+    .tl-item:before{content:"";position:absolute;left:-2px;top:6px;width:10px;height:10px;border-radius:999px;background:var(--link)}
+    /* team */
+    .team{display:grid;grid-template-columns:260px 1fr;gap:18px;align-items:start;margin-bottom:20px}
+    .team img{width:100%;border-radius:10px;border:1px solid var(--line)}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}.team{grid-template-columns:1fr}}
+    .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .video-grid img{width:100%;border-radius:10px;border:1px solid var(--line)}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#patents">Patents</a>
+      <a href="#projects">Projects</a>
+      <a href="#ourteam">OurTeam</a>
+      <a href="#videos">Videos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container grid">
+    <aside class="card">
+      <img class="avatar" src="/assets/profile.jpg?v=1" alt="Profile photo"
+           onerror="this.onerror=null;this.src='/assets/ADS5.jpg'"/>
+      <h2>Jinwoo Kim</h2>
+      <p>Autonomous Driving Research Development</p>
+      <p class="muted">Daejeon, South Korea</p>
+      <p><a href="https://github.com/jwkim81-ETRI">GitHub</a></p>
+      <p><a href="https://www.linkedin.com/in/jinwoo-kim-836a9b56/">LinkedIn</a></p>
+      <p><a href="https://scholar.google.com/citations?user=ygAVm3EAAAAJ&hl=en">Google Scholar</a></p>
+    </aside>
+
+    <main>
+      <section id="about">
+        <h1>About Me</h1>
+        <p class="lead">Senior researcher with <strong>15 years of autonomous driving research</strong>, currently applying <strong>end-to-end vision-language models</strong> to real vehicles. My focus is on building driving intelligence comparable to humans—and advancing beyond it. I explore <em>perception-to-planning</em> with <strong>multi-stage reasoning</strong>, <strong>HD-map aware actions</strong>, and <strong>real-time inference</strong> in adverse weather/night/OOD conditions.</p>
+
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="tl-item">
+            <strong>Senior Researcher, ETRI</strong> — Daejeon, South Korea <span class="muted">(2009-09 – Present)</span>
+            <div class="muted">GENIVI standards; next-gen in-vehicle HMI/UX; multimodal interfaces (gesture). Driver state recognition (DL/ML with vision/vehicle/sensor fusion); integration to AVs; driver UX. Multi-sensor environment recognition (stereo+mono fusion; multi-LiDAR-camera; radar-camera; lane/vehicle/traffic light with DL). Driving situation awareness incl. DRIVE AI (construction/accident scenarios). VLM, IL, RL, E2E.</div>
+          </div>
+        </div>
+
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="tl-item"><strong>KAIST</strong> — PhD Student, Autonomous Driving & VLM RL <span class="muted">(2024-01 – )</span></div>
+          <div class="tl-item"><strong>Hanyang University</strong> — M.S. Computer Engineering (HCI) <span class="muted">(2007-02 – 2009-02)</span></div>
+          <div class="tl-item"><strong>Hanyang University</strong> — B.S. Computer Vision & Human Interaction <span class="muted">(2007 – 2009)</span></div>
+        </div>
+      </section>
+
+      <section id="news">
+        <h2>News</h2>
+        <ul>
+          <li>2025.07 — <span class="badge">ICCV 2025 WS</span> <strong>SADWA: Fine-Grained Weather Awareness with Vision-Language Models for Seamless Autonomous Driving in Real Time</strong> accepted. Authors: Jinwoo Kim, Hayeon Oh, Youngmin Oh, Kyounghwan An, Donghwan Lee.</li>
+          <li>2025 — Building VLM-based E2E driving stack with weather robustness and selective routing.</li>
+        </ul>
+      </section>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+        <p>Autonomous driving, end-to-end learning, vision-language models, multimodal reasoning, RL-based driving intelligence, adverse weather robustness.</p>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li><a href="https://www.springerprofessional.de/en/rosa-dataset-road-construct-zone-segmentation-for-autonomous-dri/51030158">RoSA Dataset: Road construct zone Segmentation for Autonomous Driving</a> — ECCV Workshop 2024</li>
+          <li><a href="https://link.springer.com/article/10.1007/s11227-019-02811-y">Multi-sensor-based Detection and Tracking of Moving Objects for Relative Position Estimation in Autonomous Driving Conditions</a> — Springer 2020</li>
+          <li><a href="https://ieeexplore.ieee.org/document/7535573">Fusion of driver-information based driver status recognition for co-pilot system</a> — IEEE IV 2016</li>
+          <li><a href="https://onlinelibrary.wiley.com/doi/full/10.4218/etrij.15.0114.0076">Multimodal Interface Based on Novel HMI UI/UX for In-Vehicle Infotainment System</a> — ETRI Journal 2015</li>
+        </ul>
+      </section>
+
+      <section id="patents">
+        <h2>Patents</h2>
+        <ul>
+          <li>System and Method for Fusion Recognition using Active Stick Filter (US11790555, 2023)</li>
+          <li>The Apparatus and Method for Driver Status Recognition (JP7154959, 2022)</li>
+          <li>Apparatus and Method of Learning Pose of Moving Object (US10789717, 2020)</li>
+          <li>User Intention Analysis Apparatus and Method (US9886623, 2018)</li>
+          <li>System and Method for Learning Driving Information in Vehicle (US9485474, 2016)</li>
+          <li>Method and Apparatus for Analyzing Concentration Level of Driver (US9355546, 2016)</li>
+          <li>Augmented Reality Display System and Method for Vehicle (US9075563, 2015)</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>End-to-End Weather-Robust Driving</li>
+          <li>Selective Routing Planner</li>
+          <li>Map-aware Action Reasoner</li>
+        </ul>
+      </section>
+
+      <section id="ourteam">
+        <h2>OurTeam — Autonomous Vehicle Fleet</h2>
+
+        <div class="team">
+          <img src="/assets/ADS_RL-E2E.jpg" alt="RL-E2E Vehicle"/>
+          <div>
+            <h3>RL-E2E Vehicle</h3>
+            <p class="muted">Reinforcement-learning driven E2E research car, combining perception encoders with policy heads for imitation + RL. Online fine-tuning and VLM-guided reasoning for safe maneuvers.</p>
+          </div>
+        </div>
+
+        <div class="team">
+          <img src="/assets/ADS_taxi.jpg" alt="Robo Taxi"/>
+          <div>
+            <h3>Robo Taxi</h3>
+            <p class="muted">Urban ride-hailing prototype for dense traffic. Includes HD-map routing, curb-side logic, comfort control, and night/adverse weather operation.</p>
+          </div>
+        </div>
+
+        <div class="team">
+          <img src="/assets/ADS_shuttle.jpg" alt="Robo Shuttle"/>
+          <div>
+            <h3>Robo Shuttle</h3>
+            <p class="muted">Campus/park shuttle tuned for smooth, predictable motion. Emphasizes low-speed safety, precise docking, and scripted routes with language-based detours.</p>
+          </div>
+        </div>
+
+        <div class="team">
+          <img src="/assets/ADS_Seamless.jpg" alt="Seamless Off-road & Adverse Weather"/>
+          <div>
+            <h3>Seamless — Off-road / Adverse Weather</h3>
+            <p class="muted">All-terrain platform for snow, rain, fog, and unpaved roads. Robustness via redundancy across LiDAR-radar-camera and self-supervised adaptation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="videos">
+        <h2>Research Videos</h2>
+        <div class="video-grid">
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7318985849746964480/" target="_blank">
+            <img src="/assets/ADS5.jpg" alt="LinkedIn video"/>
+          </a>
+          <a href="https://youtu.be/GlPyKlAe51E?feature=shared" target="_blank">
+            <img src="/assets/youtube1.jpg" alt="YouTube 1"/>
+          </a>
+          <a href="https://youtu.be/EL1s0mYqN9I?feature=shared" target="_blank">
+            <img src="/assets/youtube2.jpg" alt="YouTube 2"/>
+          </a>
+          <a href="https://youtu.be/CpQyBskGDPw?feature=shared" target="_blank">
+            <img src="/assets/youtube3.jpg" alt="YouTube 3"/>
+          </a>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jwkim81@etri.re.kr">jwkim81@etri.re.kr</a></p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
